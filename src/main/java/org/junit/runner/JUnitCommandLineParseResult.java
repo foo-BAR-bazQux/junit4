@@ -54,7 +54,7 @@ class JUnitCommandLineParseResult {
         for (int i = 0; i != args.length; ++i) {
             String arg = args[i];
 
-            if (arg.equals("--")) {
+            if ("--".equals(arg)) {
                 return copyArray(args, i + 1, args.length);
             } else if (arg.startsWith("--")) {
                 if (arg.startsWith("--filter=") || arg.equals("--filter")) {
